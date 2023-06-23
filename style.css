@@ -1,0 +1,74 @@
+body {
+    background-color: rgb(255, 219, 188);
+    background-image: url("images/safarizone.jpg");
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    font-size: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: 5px;
+    margin-bottom: 3px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.center-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+}
+.link {
+    color: rgb(232, 105, 0);
+}
+.center-text {
+    text-align: center;
+}
+hr {
+    height: 3px;
+    background-color: rgb(255, 150, 65);
+    border-width: 0;
+    width: 100%;
+}
+.div-text {
+    background-color: rgb(205, 205, 205, 0.94);
+    width: 98%;
+    border: 3px solid whitesmoke;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+}
+.div-title {
+    background-color: rgb(205, 205, 205, 0.95);
+    width: 20%;
+    border: 3px solid whitesmoke;
+    border-radius: 5px;
+    padding: 3px;
+    margin: auto;
+}
+figcaption {
+    color: black;
+    font-style: italic;
+    padding: 7px;
+    text-align: center;
+}
+* {
+    box-sizing: border-box;
+}
+.row {
+    display: flex;
+}
+.column {
+    flex: 50%;
+    padding: 5px;
+}
+.img {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
