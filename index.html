@@ -12,7 +12,7 @@
     <div class="div-title"><h1 class="center-text"><a href="https://pokemon.fandom.com/wiki/Safari_Zone" target="_blank"
       rel="noopener noreferrer" class="link">The Safari Zone</a></h1>
       <p class="center-text"><i class="fa-solid fa-calendar-days fa-lg" style="color: #000000;"></i>
-        <em>Last updated: June XX 2023</em></p>
+        <em>Last updated: June 23 2023</em></p>
     </div><hr>
     <div class="div-text">
       <h2 class="center-text"><b><a href="https://bulbapedia.bulbagarden.net/wiki/Kanto_Safari_Zone" target="_blank" 
@@ -21,19 +21,19 @@
           <img src="images/FL_Safari_Zone.png" alt="Safari Zone from Pokémon FireRed and LeafGreen" width="400" height="240" class="center-image">
             <figcaption>The Safari Zone from Pokémon FireRed and LeafGreen (Game Boy)</figcaption>
           </figure>
-        <p>In the Pokémon games, the Safari Zone is a fun game where the player tries to catch a variety Pokémon in different areas, but without battling them with their own. There are 4 main
-          options when encountering Pokémon in this area: throw a pokéball, throw bait or mud, or run. Throwing bait or mud can increase and/or decrease catch and flee rates
-          in a battle, so this game is more reliant on hoping the RNG(Randon Number Generator) is in the player's favor. A player's time in the Safari Zone ends when they reach a certain
+        <p>In the Pokémon games, the Safari Zone is a fun game where the player tries to catch a variety of Pokémon in different areas, but without battling them with their own. There are 4 main
+          options when encountering Pokémon, but can vary from different game versions: throw a pokéball, throw bait and/or mud, or run. Throwing bait or mud can increase and/or decrease catch and flee rates
+          in a wild encounter, among other factors that can influence them as well, so this game is more reliant on hoping the RNG(Randon Number Generator) is in the player's favor. A player's time in the Safari Zone ends when they reach a certain
           number of steps, typically around 500-600 steps.
         </p>
     </div>
     <div class="div-text">
       <h2 class="center-text"><b><a href="https://github.com/mangara22/TextSafariZone" target="_blank" 
         rel="noopener noreferrer" style="color:black"><i class="fa-brands fa-square-github fa-lg" style="color: #000000;"></i> My text-based Safari Zone</a></b></h2>
-        <p>My text-based Safari Zone uses asks the user for certain commands via the terminal. Although it does have similar mechanics to the original Safari Zone, it's a lot
-          more scaled down and obviously doesn't have the classic Game Boy graphics, but it does use <em>ANSI colors</em> and the use of <em>Thread.sleep()</em> to help add some
-          game-like effects to my version of this game. This game ends if the user has hit 100 steps or if they have run out of pokéballs to use. Now because the 
-          original Safari Zone uses a lot of RNG, I use a lot of Java's Random class.</p>
+        <p>My text-based Safari Zone asks the user for certain commands via the terminal to play the game. Although it does have similar mechanics to the original Safari Zone, it's a lot
+          more scaled down and obviously doesn't have the classic Game Boy graphics, but it does use tools such as <em>ANSI colors</em> and the use of <em>Thread.sleep()</em> to help add some
+          game-like effect. The game ends if the user meets 100 steps or if they have run out of pokéballs to use. Now because the 
+          original Safari Zone uses a lot of RNG, I use a lot of Java's Random class to somewhat emulate the RNG from the original games.</p>
         <div class="row">
           <div class="column">
             <figure><img src="images/SZgameplay/welcome.png" alt="Start of Safari Zone game" width="100%">
@@ -46,16 +46,16 @@
             </figure>
           </div>
         </div>
-        <p>The game starts by printing out some information, and then prompting the user to choose a region, once they do, it will read a 75 line <em>.txt</em> file that will populate
-          each zone, my game has 15 Pokémon per zone with 5 zones total. The user enters a new zone by meeting a random target value of steps between the interval [10-20] and is met with a brief 
-          description of the zone that they will enter. I have implemented 4
-          options: moving around has the user take a step which will result in a 50% chance of a battle, looking has the user see if there is an item(pokéball, bait, mud, or berries) they can 
-          pick up, stats will show helpful information to the user, and quitting will end the game early. The user starts with 30 pokéballs, 5 berries, 20 bait and mud each, and 10 "display uses".
+        <p>The game starts by printing out some set-up information, and then prompting the user to choose a region, once they do, it will read a 75 line <em>.txt</em> file based on the user's selected region that will populate
+          each distinct zone, my game has 15 Pokémon per zone with 5 zones total. The user enters a new zone by meeting a random target value of steps between the interval [10-20] and is met with a brief 
+          description of the zone and list of potential Pokémon that they can encounter. I have implemented 4 options: moving around has the user take a step which will result in a 50% chance of a battle, looking has the user see 
+          if there is an item(pokéball, bait, mud, or berries) they can pick up, stats will show helpful information to the user, and quitting will end the game early. The user starts with 
+          30 pokéballs, 5 berries, 20 bait and mud each, and 10 "display uses".
         </p>
         <div class="clearfix">
           <div class="img">
             <figure><img src="images/SZgameplay/battle:rates.png" alt="Battle, Catch/Flee rates" height="200" width="370">
-              <figcaption>Pokémon battle and displaying catch/flee rates option</figcaption>
+              <figcaption>Wild Pokémon encounter and "display" option</figcaption>
             </figure>
           </div>
           <div class="img">
@@ -65,17 +65,17 @@
           </div>
           <div class="img">
             <figure><img src="images/SZgameplay/bait:mud.png" alt="Using bait/mud" height="200" width="380">
-              <figcaption>Using bait and mud to manipulate catch/flee rates</figcaption>
+              <figcaption>Using bait and mud to change catch/flee rates</figcaption>
             </figure>
           </div>
         </div>
         <p>I have added some small mechanics to my version of the game, when the user encounters a wild Pokémon, they're asked if they want to display catch/flee rates. This is
-          a very beneficial tool to use when catching Pokémon in the Safari Zone as the user can easily determine if they have to use other items, such as mud or bait, to catch the opponent. 
-          However, they're limited to 10 uses only, so they have to use these "display uses" wisely. For catch rates, I have it so that a random number on the interval [0-4], 0-2 will cause the opponent to break out of the user's pokéball and 3-4 will result in a successful catch.
-          For flee rates, for a random number on the interval [0-5], 0-3 will stay in battle and 4-5 will cause the opponent to run from battle. The user can change the catch/flee rate using mud, bait, and berries.
-          Mud increases the opponent's catch rate, but it also increases their flee rate. Bait decreases flee rate, but it also decreases the catch rate. Berries are a lot more beneficial, as
-          they increase the opponent's catch rate and decrease the flee rate. Because of these items, for a random number on the interval [0-7] when looking, 0-1 gets a pokéball, 2-3 for some bait, 4-5 for some mud, 6 for a berry, and 7 is no item.
-          Berries are meant to be somewhat uncommon/rare as they're the most beneficial in battle second to a pokéball.
+          a very beneficial tool to use when catching Pokémon in the Safari Zone as the user can easily determine if they have to use other items, such as mud or bait, to catch the opposing Pokémon. 
+          However, they're limited to 10 uses only, so they have to use these "display uses" wisely. For catch rates, I have it so that a random number on the interval [0-4] will either cause the opponent to break out of the user's pokéball 
+          (numbers 0-2) or will result in a successful catch (numbers 3-4). For flee rates, for a random number on the interval [0-5], 0-3 will stay in battle and 4-5 will cause the opponent to run from battle. 
+          The user can manipulate the catch/flee rate in their favor using mud, bait, and berries. Mud increases the opponent's catch rate, but it also increases their flee rate. Bait decreases flee rate, but it also decreases the catch rate. 
+          Berries are a lot more beneficial, as they increase the opponent's catch rate and decrease the flee rate. Because of these items, for a random number on the interval [0-7] when looking, 0-1 gets a pokéball, 2-3 for some bait, 4-5 for some mud, 6 for a berry, and 7 is no item.
+          Notice that berries are meant to be somewhat rare in this implementation compared to bait, mud, or pokéballs. I have also implemented that using more pokéballs in battle will cause the catch rate to decrease and the flee rate to increase, so that the battle isn't too long.
         </p>
         <div class="row">
           <div class="column">
@@ -89,8 +89,8 @@
             </figure>
           </div>
         </div>
-        <p>At any point during the game and at the end of the game, the user's stats is displayed, which shows helpful information such as how many pokéballs they have left orhow many steps they've taken, etc. When the game ends,
-          there is also a line that shows the user how much time they spent in the Safari Zone, which is another extra mechanic I added to my version.
+        <p>At any point during the game and at the end of the game, the user's stats is displayed, which shows helpful information such as how many pokéballs they have left or the steps they've taken, etc. 
+          There is also information on what Pokémon the user caught and the time spent in the Safari Zone.
         </p>
     </div>
   </body>
